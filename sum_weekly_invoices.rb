@@ -1,10 +1,12 @@
+require 'date'
+
 class SumWeeklyInvoices
   def initialize(filename)
     @filename = filename
   end
 
   def add
-    p "Sum is #{load_file_data.round(1)}"
+    p "Sum is #{load_file_data.round(1)} for the week of #{Date.today}"
   end
 
   private
