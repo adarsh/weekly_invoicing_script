@@ -16,7 +16,7 @@ class SumWeeklyInvoices
   def load_file_data
     text.inject(0) do |sum, line|
       if line[0] == '*'
-        sum += LineProcessor.new(line).process
+        sum += LineProcessor.new(line).process || 0
       else
         sum
       end
